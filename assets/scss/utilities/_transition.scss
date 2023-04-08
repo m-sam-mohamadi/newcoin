@@ -1,0 +1,24 @@
+//animation for pages
+//==================
+
+//slide vertical mode animation
+.slide-enter-active,
+.slide-leave-active {
+  transition: all .5s;
+}
+
+.slide-enter,
+.slide-leave-active {
+  transform: translateX(100%);
+}
+
+//slide fade mode animation
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .5s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}

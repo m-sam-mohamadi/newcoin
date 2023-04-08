@@ -1,0 +1,100 @@
+@import "~@/assets/scss/base";
+
+//stepper styles 
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .steps {
+    margin-top: 10px;
+
+    &.notActive {
+
+      .stepperCircle,
+      .stepperText {
+        transition: .3s;
+        opacity: .5;
+      }
+
+      .stepperCircle {
+        background-color: white;
+        transition: .3s;
+      }
+
+    }
+
+
+  }
+
+  //get active steps
+  @for $i from 0 through 2 {
+
+    &.activeTab-#{$i} {
+      .step-#{$i} {
+
+        .stepperCircle,
+        .stepperText {
+          opacity: 1;
+        }
+
+        .stepperCircle {
+          background-color: rgba(255, 255, 255, 0.333);
+        }
+      }
+    }
+
+  }
+
+  &.activeTab-2 {
+
+    .step-0,
+    .step-1 {
+
+      .stepperCircle,
+      .stepperText {
+        opacity: 1;
+      }
+
+      .stepperCircle {
+        background-color: white;
+      }
+    }
+  }
+
+  &.activeTab-1 {
+
+    .step-0 {
+
+      .stepperCircle,
+      .stepperText {
+        opacity: 1;
+      }
+
+      .stepperCircle {
+        background-color: white;
+      }
+    }
+  }
+
+  .divide {
+    height: 50px;
+    width: 3px;
+    background-color: white;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-right: 13px;
+
+    // &:nth-last-child(odd) {
+    //   display: none;
+    // }
+  }
+
+  .stepperCircle {
+    width: 30px;
+    height: 30px;
+    border: 3px solid white;
+    border-radius: 500px;
+    background-color: #9CC4F2;
+  }
+}

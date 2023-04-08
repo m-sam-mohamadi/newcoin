@@ -1,0 +1,86 @@
+@import "~@/assets/scss/base";
+
+//login form styles
+.loginSection {
+  height: 100vh;
+  @include centering('flex');
+  background-color: $bg-color;
+  overflow: auto;
+
+  .row {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+
+  .loginForm {
+    @include centering('flex');
+    height: 100%;
+    flex-direction: column;
+
+    .loginBtn {
+      border-radius: 16px;
+      padding: 22px 15px;
+      color: white;
+      letter-spacing: 0;
+      margin: auto !important;
+    }
+
+    .v-text-field {
+      margin-bottom: 20px;
+
+      input {
+        margin-right: 14px;
+      }
+
+      .v-input__icon.v-input__icon--prepend-inner {
+
+        z-index: 99 !important;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          @include centering('transform');
+          margin-left: auto;
+          margin-right: auto;
+          background-color: #666666;
+          width: 1px !important;
+          height: 20px !important;
+          z-index: 9999 !important;
+          left: -30%;
+        }
+      }
+
+      .v-label:not(.v-label.v-label--active) {
+        margin-right: 14px;
+      }
+    }
+  }
+
+  .loginDetail {
+    height: 100% !important;
+    background: #388AEA;
+    @include centering('flex');
+    flex-direction: column;
+    color: white;
+
+    @media (max-width:700px) {
+      display: none;
+    }
+
+    .loginDetailText {
+      width: 300px;
+      text-align: center
+    }
+
+    .loginDetailImage {
+      @include centering('flex');
+
+      .v-image {
+        width: 240px;
+      }
+    }
+  }
+}

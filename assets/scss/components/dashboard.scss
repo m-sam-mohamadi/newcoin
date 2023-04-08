@@ -1,0 +1,63 @@
+@import "../base";
+
+//styles for dashboard section
+.dashboard {
+  background-color: $bg-color;
+
+  //app bar styles
+  .v-app-bar {
+    border-radius: 16px !important;
+    background-color: rgba($color: white, $alpha: .6) !important;
+    backdrop-filter: blur(10px);
+
+    &.v-app-bar--fixed {
+      max-width: calc(100% - 300px) !important;
+      margin: auto;
+      top: 3% !important;
+
+      @media (max-width:900px) {
+        max-width: calc(100% - 50px) !important;
+
+      }
+    }
+
+
+
+  }
+
+  //sidebar styles
+  .v-navigation-drawer {
+    border-radius: 16px !important;
+
+    &.v-navigation-drawer--fixed {
+
+      width: calc(265px - 40px) !important;
+      max-height: calc(100% - 50px) !important;
+      right: 1%;
+      top: 3% !important;
+    }
+  }
+
+  .sideBar {
+    .sideBarItem {
+      border-radius: 16px !important;
+      overflow: hidden !important;
+
+    }
+
+    .v-btn {
+      padding-right: 4px !important;
+
+      .v-btn__content {
+        display: flex !important;
+        justify-content: flex-start !important;
+
+        i {
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+
+  //==================
+}

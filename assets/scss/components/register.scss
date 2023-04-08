@@ -1,0 +1,108 @@
+@import "~@/assets/scss/base";
+
+//register form styles
+.registerSection {
+  @include centering('flex');
+  background-color: $bg-color;
+  position: relative;
+
+  .wrapper {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 16px;
+    background-color: white;
+    position: relative;
+    z-index: 5;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: #d2d2d2;
+    position: absolute;
+    left: 2%;
+    bottom: 12%;
+  }
+
+
+  .nextBtn,
+  .prevBtn {
+    @extend .primaryBtn;
+    position: absolute;
+    left: 2%;
+    bottom: 3%;
+  }
+
+  .prevBtn {
+    left: unset;
+    right: 30%;
+
+    @media (max-width:960px) {
+      right: 50%;
+    }
+
+    @media (max-width:702px) {
+      right: 2%;
+    }
+  }
+
+  .registerForm {
+    margin: auto;
+    margin-top: 30px;
+    position: relative;
+
+  }
+
+  .v-text-field {
+    margin-bottom: 10px;
+
+    input {
+      margin-right: 14px;
+    }
+
+    .v-input__icon {
+
+      z-index: 99 !important;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        @include centering('transform');
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #666666;
+        width: 1px !important;
+        height: 20px !important;
+        z-index: 9999 !important;
+        left: -30%;
+      }
+    }
+
+    .v-label:not(.v-label.v-label--active) {
+      margin-right: 14px;
+    }
+  }
+
+
+  .registerStepper {
+    background: #388AEA;
+    @include centering('flex');
+    flex-direction: column;
+    justify-content: flex-start;
+    color: white;
+    z-index: 999;
+
+    @media (max-width:700px) {
+      display: none;
+    }
+  }
+
+  .sendCodeBtn {
+    margin-top: -11px;
+    margin-left: -15px;
+    padding: 22px 10px !important;
+  }
+}

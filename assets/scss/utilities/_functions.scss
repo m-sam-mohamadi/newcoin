@@ -1,0 +1,14 @@
+//custom centering function for center all elements
+@mixin centering($mode) {
+  @if($mode=="flex") {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @if($mode=="transform") {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

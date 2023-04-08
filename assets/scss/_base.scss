@@ -1,0 +1,83 @@
+// base of styles
+@import "./utilities/colors";
+@import "./utilities/fonts";
+@import "./utilities/functions";
+@import "./utilities/customStyle";
+@import "./utilities/transition";
+
+//====change page scroll style
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #388AEA;
+  border-radius: 100px;
+}
+
+//====================
+* {
+  font-family: yekan;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $bg-color;
+  direction: rtl;
+}
+
+
+//====change some reserved vuetify style 
+.v-application {
+  background-color: $bg-color;
+  font-family: yekan,
+    sans-serif !important;
+
+  [class*='text-'] {
+    font-family: yekan, sans-serif !important;
+  }
+
+  .v-btn,
+  .v-text-field,
+  .text-h6 {
+    letter-spacing: 0 !important;
+    font-family: yekan, sans-serif;
+  }
+
+  .text--white {
+    color: white !important;
+  }
+
+  td.price {
+    font-family: sans-serif !important;
+
+  }
+
+  .v-tooltip {
+    .v-tooltip__content {
+      font-family: sans-serif !important;
+    }
+  }
+
+  .v-label.v-label--active {
+    font-weight: 900 !important;
+    font-size: 18px !important;
+  }
+
+}
+
+//==================== 
+//change map style
+.mapCard {
+  position: relative;
+
+  .mapAction {
+    @include centering('flex');
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translateX(-50%);
+  }
+}

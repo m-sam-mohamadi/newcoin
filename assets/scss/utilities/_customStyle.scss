@@ -1,0 +1,62 @@
+//custom styles
+//==================== 
+// base title config
+.mainTitle {
+  font-size: 40px;
+  font-weight: 900;
+  font-family: yekan;
+}
+
+//simple link config
+.mainLink {
+  color: #388AEA;
+  font-family: 14px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+//change color to mainblue
+.blueText {
+  color: #388AEA;
+
+}
+
+//styles for btn
+.primaryBtn {
+  color: white;
+  border-radius: 16px !important;
+  padding: 22px 15px !important;
+}
+
+//fade layer for trend data
+.fadeLayer {
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(transparent, white);
+}
+
+//otp input style
+.otpInput {
+  direction: ltr !important;
+
+  .v-input {
+    border-radius: 16px !important;
+    direction: ltr !important;
+    @include centering('flex')
+  }
+
+  input {
+    font-size: 24px !important;
+    text-align: center;
+    padding: 34px 0px !important;
+    margin: 0 !important;
+  }
+}
+
+//radius
+.rounded-16 {
+  border-radius: 16px !important;
+}

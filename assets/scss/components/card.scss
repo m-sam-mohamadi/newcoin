@@ -1,0 +1,96 @@
+//styles for all card component
+//===================
+
+//card shown in slider styles
+.cardComponent {
+  min-width: 300px;
+  background: white;
+  border-radius: 16px;
+  scroll-snap-align: center;
+  margin: 5px 10px;
+
+  .highcharts-root {
+    ~text.highcharts-credits {
+      display: hidden !important;
+      opacity: 0 !important;
+    }
+
+  }
+
+  .highcharts-point {
+    stroke: #2AC479 !important;
+    stroke-width: 3px !important;
+  }
+
+  .cardTitle {
+    font-weight: 900;
+    font-family: sans-serif;
+  }
+
+  .cardSubTitle {
+    font-size: 12px;
+    color: #999;
+    font-family: sans-serif;
+  }
+
+  .profit {
+    color: #29C57A;
+    font-family: sans-serif;
+  }
+
+  .price {
+
+    font-family: sans-serif;
+  }
+}
+
+//trending coins card styles
+.popularCard {
+  border-radius: 16px !important;
+  overflow: hidden;
+  padding: 12px;
+
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center !important;
+  }
+
+  .cardTitle {
+    font-family: sans-serif;
+  }
+
+  .cardSubTitle {
+    color: #999;
+    font-family: sans-serif;
+  }
+
+  .price {
+    color: #29C57A;
+    font-family: sans-serif !important;
+  }
+}
+
+//market cap card styles
+.costCard {
+
+  border-radius: 16px !important;
+  overflow: hidden;
+  padding: 12px;
+}
+
+//wallet card styles
+.walletCard {
+
+  border-radius: 16px !important;
+  overflow: hidden;
+  padding: 12px;
+}
+
+//tradingview card styles
+.tradingViewCard {
+  // height: 200px;
+  border-radius: 16px !important;
+  overflow: hidden;
+  padding: 12px;
+}
