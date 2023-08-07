@@ -48,11 +48,13 @@ export default {
       document.querySelector(".cardComponent")?.clientWidth
     );
     slider?.addEventListener("wheel", (e) => {
-      if (e.deltaY > 0) {
-        slider!.scrollLeft -= cardWidth;
-      } else {
-        slider!.scrollLeft += cardWidth;
-      }
+      console.log(e);
+      
+      // if (e.deltaY > 0) {
+      //   slider!.scrollLeft -= cardWidth;
+      // } else {
+      //   slider!.scrollLeft += cardWidth;
+      // }
     });
   },
 };

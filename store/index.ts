@@ -117,7 +117,7 @@ export const mutations = {
 }
 export const actions = {
     //login method
-    async LogIn({ commit }: any, { password, email }: any) {
+    async LogIn({ commit,app }: any, { password, email }: any) {
         var formdata: FormData = new FormData();
         formdata.append("email", email);
         formdata.append("password", password);
@@ -140,7 +140,7 @@ export const actions = {
                         show: true,
                         color: 'success'
                     });
-                    this.$router.push("/dashboard");
+                    app.$router.push("/dashboard");
                 } else {
                     commit([mutate.SHOW_ALERT], {
                         text: "ورورد با خطا مواجه شد",
@@ -157,7 +157,7 @@ export const actions = {
 
     },
     //register method
-    async Register({ commit }: any, {
+    async Register({ commit,app }: any, {
         name,
         email,
         phone,
@@ -181,7 +181,7 @@ export const actions = {
             .then((res) => {
                 console.log(res);
                 if (res.status == 200) {
-                    this.$router.push("/dashboard");
+                    app.$router.push("/dashboard");
                     commit([mutate.SET_USER], JSON.stringify(res.result))
                     commit([mutate.SET_TOKEN], JSON.stringify(res.token))
                     localStorage.removeItem('page1')
